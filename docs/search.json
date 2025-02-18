@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "demosite3",
+    "section": "",
+    "text": "Ernest NTEDE is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "demosite3",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul, MN B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "demosite3",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
+  },
+  {
+    "objectID": "MyProjects.html",
+    "href": "MyProjects.html",
+    "title": "MyProjects",
+    "section": "",
+    "text": "This chapter will show you how to use visualization and transformation to explore your data in a systematic way, a task that statisticians call exploratory data analysis, or EDA for short. EDA is an iterative cycle. You:\n\nGenerate questions about your data.\nSearch for answers by visualizing, transforming, and modelling your data.\nUse what you learn to refine your questions and/or generate new questions.\n\nEDA is not a formal process with a strict set of rules. More than anything, EDA is a state of mind. During the initial phases of EDA you should feel free to investigate every idea that occurs to you. Some of these ideas will pan out, and some will be dead ends. As your exploration continues, you will home in on a few particularly productive insights that you’ll eventually write up and communicate to others.\nEDA is an important part of any data analysis, even if the primary research questions are handed to you on a platter, because you always need to investigate the quality of your data. Data cleaning is just one application of EDA: you ask questions about whether your data meets your expectations or not. To do data cleaning, you’ll need to deploy all the tools of EDA: visualization, transformation, and modelling.\n\n\nIn this chapter we’ll combine what you’ve learned about dplyr and ggplot2 to interactively ask questions, answer them with data, and then ask new questions.\n\nlibrary(styler)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "MyProjects.html#introduction",
+    "href": "MyProjects.html#introduction",
+    "title": "MyProjects",
+    "section": "",
+    "text": "This chapter will show you how to use visualization and transformation to explore your data in a systematic way, a task that statisticians call exploratory data analysis, or EDA for short. EDA is an iterative cycle. You:\n\nGenerate questions about your data.\nSearch for answers by visualizing, transforming, and modelling your data.\nUse what you learn to refine your questions and/or generate new questions.\n\nEDA is not a formal process with a strict set of rules. More than anything, EDA is a state of mind. During the initial phases of EDA you should feel free to investigate every idea that occurs to you. Some of these ideas will pan out, and some will be dead ends. As your exploration continues, you will home in on a few particularly productive insights that you’ll eventually write up and communicate to others.\nEDA is an important part of any data analysis, even if the primary research questions are handed to you on a platter, because you always need to investigate the quality of your data. Data cleaning is just one application of EDA: you ask questions about whether your data meets your expectations or not. To do data cleaning, you’ll need to deploy all the tools of EDA: visualization, transformation, and modelling.\n\n\nIn this chapter we’ll combine what you’ve learned about dplyr and ggplot2 to interactively ask questions, answer them with data, and then ask new questions.\n\nlibrary(styler)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "MyProjects.html#questions",
+    "href": "MyProjects.html#questions",
+    "title": "MyProjects",
+    "section": "2. Questions",
+    "text": "2. Questions\n“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox\n“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey\nYour goal during EDA is to develop an understanding of your data. The easiest way to do this is to use questions as tools to guide your investigation. When you ask a question, the question focuses your attention on a specific part of your dataset and helps you decide which graphs, models, or transformations to make.\nEDA is fundamentally a creative process. And like most creative processes, the key to asking quality questions is to generate a large quantity of questions. It is difficult to ask revealing questions at the start of your analysis because you do not know what insights can be gleaned from your dataset. On the other hand, each new question that you ask will expose you to a new aspect of your data and increase your chance of making a discovery. You can quickly drill down into the most interesting parts of your data—and develop a set of thought-provoking questions—if you follow up each question with a new question based on what you find.\nThere is no rule about which questions you should ask to guide your research. However, two types of questions will always be useful for making discoveries within your data. You can loosely word these questions as:\n\nWhat type of variation occurs within my variables?\nWhat type of covariation occurs between my variables?\n\nThe rest of this chapter will look at these two questions. We’ll explain what variation and covariation are, and we’ll show you several ways to answer each question."
+  },
+  {
+    "objectID": "MyProjects.html#variation",
+    "href": "MyProjects.html#variation",
+    "title": "MyProjects",
+    "section": "3. Variation",
+    "text": "3. Variation\nVariation is the tendency of the values of a variable to change from measurement to measurement. You can see variation easily in real life; if you measure any continuous variable twice, you will get two different results. This is true even if you measure quantities that are constant, like the speed of light. Each of your measurements will include a small amount of error that varies from measurement to measurement. Variables can also vary if you measure across different subjects (e.g., the eye colors of different people) or at different times (e.g., the energy levels of an electron at different moments). Every variable has its own pattern of variation, which can reveal interesting information about how that it varies between measurements on the same observation as well as across observations. The best way to understand that pattern is to visualize the distribution of the variable’s values, which you’ve learned about in Chapter 1.\nWe’ll start our exploration by visualizing the distribution of weights (carat) of ~54,000 diamonds from the diamonds dataset. Since carat is a numerical variable, we can use a histogram:\n\nggplot(diamonds, aes(x = carat)) + \n  geom_histogram(binwidth = 0.5)\n\n\n\n\n\n\n\n\nNow that you can visualize variation, what should you look for in your plots? And what type of follow-up questions should you ask? We’ve put together a list below of the most useful types of information that you will find in your graphs, along with some follow-up questions for each type of information. The key to asking good follow-up questions will be to rely on your curiosity (What do you want to learn more about?) as well as your skepticism (How could this be misleading?)."
+  }
+]

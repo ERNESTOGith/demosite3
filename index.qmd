@@ -1,0 +1,36 @@
+---
+title: "demosite3"
+image: photo.jpg
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 8cm
+  links: 
+    - text: Email
+      icon: envelope
+      href: ntede.enest@gmail.com
+    - text: GitHub
+      icon: github
+      href: https://github.com/ERNESTOGith
+    - text: YouTube
+      icon: youtube
+      href: https://youtube.com/
+    - text: resume
+      icon: file-text
+      href: resume.pdf
+  id: ppc
+---
+
+**Ernest NTEDE** is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.
+
+## Education
+
+University of California, San Diego \| San Diego, CA PhD in Mathematics \| Sept 2011 - June 2015
+
+Macalester College \| St. Paul, MN B.A in Economics \| Sept 2007 - June 2011
+
+## Experience
+
+Wengo Analytics \| Head Data Scientist \| April 2018 - present
+
+GeoScynce \| Chief Analyst \| Spet 2012 - April 2018

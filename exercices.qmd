@@ -1,0 +1,35 @@
+---
+title: "Exercices R"
+---
+
+**Last Name: NTEDE**
+
+**First Name: Ernest**
+
+**Phone: (237) 691 962 255**
+
+**Email: *ntede.enest\@gmail.com***
+
+**Country of Origin: CAMEROON**
+
+# [EDUCATION]{.underline}
+
+**2019-2021**: Master’s degree in Econometrics & Statistics, University of Toulouse(France);
+
+**2011-2014**: Statistician-Economist Engineer diploma in Statistics & Applied Economics, Sub-Regional Institute for Statistics and Applied Economics(Cameroon);
+
+**2008**: Master’s degree in Economics, University of Yaounde II (Cameroon);
+
+**2007**: Bachelor’s degree in Economic Analysis and Policy, University of Yaounde II.
+
+# [TECHNICAL SKILLS]{.underline}
+
+## 1. ECONOMICS
+
+|                               |                                         |
+|-------------------------------|-----------------------------------------|
+| **a**. Microeconomic analysis | **f**. National accounts                |
+| **b**. Macroeconomic analysis | **g**. International Monetary economics |
+| **c**. International economy  | **h**. Public economy                   |
+| **d**. Monetary macroeconomy  | **i**. Long term development planning   |
+| **e**. Dynamic macro          | **g**. The history of economic thought  |
